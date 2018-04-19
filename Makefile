@@ -25,6 +25,10 @@ install:
 	# install watch
 	@npm i -D watch
 
+.PHONY: deploy
+deploy:
+	@npx gh-pages -b gh-pages -d public
+
 .PHONY: start
 start:
 	@make webpack & make pug & make sass & make postcss & make server
